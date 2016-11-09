@@ -1,4 +1,14 @@
-<support-dump>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Report Time:         2016-11-09T10:15:43.947382Z
+Report Type:         short
+Report Scope:        host
+Report Destination:  file
+Report Host:         dhcp-18-155.london.marklogic.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ ===========================================================================
+App Server Status
+===========================================================================
+Group: Default, Appserver: App-Services, Host: dhcp-34-014.london.marklogic.com
 <server-status xmlns="http://marklogic.com/xdmp/status/server">
   <server-id>2373634144810730251</server-id>
   <server-name>App-Services</server-name>
@@ -59,6 +69,8 @@
   <url-rewriter>/MarkLogic/rest-api/8000-rewriter.xml</url-rewriter>
   <request-time>0</request-time>
 </server-status>
+===========================================================================
+Group: Default, Appserver: Admin, Host: dhcp-34-014.london.marklogic.com
 <server-status xmlns="http://marklogic.com/xdmp/status/server">
   <server-id>13632242850154739292</server-id>
   <server-name>Admin</server-name>
@@ -148,6 +160,8 @@
   <url-rewriter>rewriter.xqy</url-rewriter>
   <request-time>0</request-time>
 </server-status>
+===========================================================================
+Group: Default, Appserver: Manage, Host: dhcp-34-014.london.marklogic.com
 <server-status xmlns="http://marklogic.com/xdmp/status/server">
   <server-id>4002194912111291704</server-id>
   <server-name>Manage</server-name>
@@ -208,6 +222,8 @@
   <url-rewriter>manage/rewriter.xqy</url-rewriter>
   <request-time>0</request-time>
 </server-status>
+===========================================================================
+Group: Default, Appserver: HealthCheck, Host: dhcp-34-014.london.marklogic.com
 <server-status xmlns="http://marklogic.com/xdmp/status/server">
   <server-id>1242395019116111807</server-id>
   <server-name>HealthCheck</server-name>
@@ -268,6 +284,8 @@
   <url-rewriter/>
   <request-time>0</request-time>
 </server-status>
+===========================================================================
+Group: Default, Appserver: Task-Server, Host: dhcp-34-014.london.marklogic.com
 <server-status xmlns="http://marklogic.com/xdmp/status/server">
   <server-id>319594739393707334</server-id>
   <host-id>17286465795963607917</host-id>
@@ -303,6 +321,77 @@
   <hosts/>
   <request-time>0</request-time>
 </server-status>
+===========================================================================
+Database Topology
+===========================================================================
+Documents
+  Forests:            Documents
+  Security database:  Security
+  Schemas database:   Schemas
+  Triggers database:  Triggers
+  Status:             available
+===========================================================================
+App-Services
+  Forests:            App-Services
+  Security database:  Security
+  Schemas database:   App-Services
+  Triggers database:  App-Services
+  Status:             available
+===========================================================================
+Modules
+  Forests:            Modules
+  Security database:  Security
+  Schemas database:   Schemas
+  Triggers database:  
+  Status:             available
+===========================================================================
+Extensions
+  Forests:            Extensions
+  Security database:  Security
+  Schemas database:   Schemas
+  Triggers database:  App-Services
+  Status:             available
+===========================================================================
+Security
+  Forests:            Security
+  Security database:  Security
+  Schemas database:   Schemas
+  Triggers database:  
+  Status:             available
+===========================================================================
+Schemas
+  Forests:            Schemas
+  Security database:  Security
+  Schemas database:   Schemas
+  Triggers database:  
+  Status:             available
+===========================================================================
+Triggers
+  Forests:            Triggers
+  Security database:  Security
+  Schemas database:   Schemas
+  Triggers database:  
+  Status:             available
+===========================================================================
+Last-Login
+  Forests:            Last-Login
+  Security database:  Security
+  Schemas database:   Schemas
+  Triggers database:  
+  Status:             available
+===========================================================================
+Meters
+  Forests:            Meters
+  Security database:  Security
+  Schemas database:   Schemas
+  Triggers database:  
+  Status:             available
+===========================================================================
+
+===========================================================================
+Forest Status
+===========================================================================
+Documents
 <forest-status xmlns="http://marklogic.com/xdmp/status/forest">
   <forest-id>15532928122572813399</forest-id>
   <forest-name>Documents</forest-name>
@@ -455,6 +544,8 @@
   <document-count>7</document-count>
   <directory-count>25</directory-count>
 </forest-counts>
+===========================================================================
+App-Services
 <forest-status xmlns="http://marklogic.com/xdmp/status/forest">
   <forest-id>12340835685932937784</forest-id>
   <forest-name>App-Services</forest-name>
@@ -606,6 +697,8 @@
   <document-count>226</document-count>
   <directory-count>0</directory-count>
 </forest-counts>
+===========================================================================
+Modules
 <forest-status xmlns="http://marklogic.com/xdmp/status/forest">
   <forest-id>5458874938373493597</forest-id>
   <forest-name>Modules</forest-name>
@@ -757,6 +850,8 @@
   <document-count>9</document-count>
   <directory-count>0</directory-count>
 </forest-counts>
+===========================================================================
+Extensions
 <forest-status xmlns="http://marklogic.com/xdmp/status/forest">
   <forest-id>18139312235049382502</forest-id>
   <forest-name>Extensions</forest-name>
@@ -874,6 +969,8 @@
   <document-count>0</document-count>
   <directory-count>0</directory-count>
 </forest-counts>
+===========================================================================
+Security
 <forest-status xmlns="http://marklogic.com/xdmp/status/forest">
   <forest-id>14448386076905978412</forest-id>
   <forest-name>Security</forest-name>
@@ -1026,6 +1123,8 @@
   <document-count>1228</document-count>
   <directory-count>0</directory-count>
 </forest-counts>
+===========================================================================
+Schemas
 <forest-status xmlns="http://marklogic.com/xdmp/status/forest">
   <forest-id>10570191592522681302</forest-id>
   <forest-name>Schemas</forest-name>
@@ -1144,6 +1243,8 @@
   <document-count>0</document-count>
   <directory-count>0</directory-count>
 </forest-counts>
+===========================================================================
+Triggers
 <forest-status xmlns="http://marklogic.com/xdmp/status/forest">
   <forest-id>8675517002264491320</forest-id>
   <forest-name>Triggers</forest-name>
@@ -1262,6 +1363,8 @@
   <document-count>0</document-count>
   <directory-count>0</directory-count>
 </forest-counts>
+===========================================================================
+Last-Login
 <forest-status xmlns="http://marklogic.com/xdmp/status/forest">
   <forest-id>7503513729096957128</forest-id>
   <forest-name>Last-Login</forest-name>
@@ -1379,6 +1482,8 @@
   <document-count>0</document-count>
   <directory-count>0</directory-count>
 </forest-counts>
+===========================================================================
+Meters
 <forest-status xmlns="http://marklogic.com/xdmp/status/forest">
   <forest-id>11761508017227723973</forest-id>
   <forest-name>Meters</forest-name>
@@ -1658,6 +1763,74 @@
   <document-count>32758</document-count>
   <directory-count>0</directory-count>
 </forest-counts>
+===========================================================================
+
+===========================================================================
+Trigger Definitions
+===========================================================================
+Triggers
+===========================================================================
+App-Services
+===========================================================================
+
+
+===========================================================================
+CPF Domains
+===========================================================================
+Triggers
+===========================================================================
+App-Services
+===========================================================================
+
+
+===========================================================================
+CPF Pipelines
+===========================================================================
+Triggers
+===========================================================================
+App-Services
+===========================================================================
+
+
+===========================================================================
+SQL Schemas
+===========================================================================
+Schemas
+===========================================================================
+App-Services
+===========================================================================
+
+
+===========================================================================
+SQL Views
+===========================================================================
+Schemas
+===========================================================================
+App-Services
+===========================================================================
+
+
+===========================================================================
+XML Schemas
+===========================================================================
+Schemas
+===========================================================================
+App-Services
+===========================================================================
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Hostname:            dhcp-18-155.london.marklogic.com
+Product Name:        MarkLogic Server
+Product Edition:     Essential Enterprise
+Product Environment: developer
+Product Initials:    
+Product Version:     8.0-20161017
+Product Platform:    macosx
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ ===========================================================================
+Host Status
+===========================================================================
 <host-status xmlns="http://marklogic.com/xdmp/status/host">
   <host-id>17286465795963607917</host-id>
   <host-name>dhcp-34-014.london.marklogic.com</host-name>
@@ -1914,12 +2087,26 @@
   <deadlock-rate>0</deadlock-rate>
   <deadlock-wait-load>0</deadlock-wait-load>
 </host-status>
+ ###########################################################################
+===========================================================================
+Configuration
+===========================================================================
+===========================================================================
+server.xml
+===========================================================================
+Validation results: OK
+===========================================================================
 <server xsi:schemaLocation="http://marklogic.com/xdmp/group group.xsd" xml:lang="zxx" xmlns="http://marklogic.com/xdmp/group" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <host-id>17286465795963607917</host-id>
   <licensee/>
   <license-key/>
   <ssl-private-key>STRIPPED</ssl-private-key>
 </server>
+===========================================================================
+groups.xml
+===========================================================================
+Validation results: OK
+===========================================================================
 <groups xsi:schemaLocation="http://marklogic.com/xdmp/group group.xsd" xml:lang="zxx" timestamp="14768007284745980" xmlns="http://marklogic.com/xdmp/group" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <group>
     <group-name>Default</group-name>
@@ -2309,6 +2496,11 @@
     <security-database>5059473837786024703</security-database>
   </group>
 </groups>
+===========================================================================
+databases.xml
+===========================================================================
+Validation results: OK
+===========================================================================
 <databases xsi:schemaLocation="http://marklogic.com/xdmp/database database.xsd" xml:lang="zxx" timestamp="14768006860019180" xmlns="http://marklogic.com/xdmp/database" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <database>
     <database-id>6341608505002958195</database-id>
@@ -3607,6 +3799,11 @@
     </assignment-policy>
   </database>
 </databases>
+===========================================================================
+assignments.xml
+===========================================================================
+Validation results: OK
+===========================================================================
 <assignments xsi:schemaLocation="http://marklogic.com/xdmp/assignments assignments.xsd" xml:lang="zxx" timestamp="14768007124631440" xmlns="http://marklogic.com/xdmp/assignments" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <assignment>
     <forest-name>Documents</forest-name>
@@ -3771,6 +3968,11 @@
     <database-replication/>
   </assignment>
 </assignments>
+===========================================================================
+hosts.xml
+===========================================================================
+Validation results: OK
+===========================================================================
 <hosts xsi:schemaLocation="http://marklogic.com/xdmp/hosts hosts.xsd" xml:lang="zxx" timestamp="14733731481058040" xmlns="http://marklogic.com/xdmp/hosts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <host>
     <host-id>17286465795963607917</host-id>
@@ -3783,10 +3985,32 @@
     <foreign-bind-port>7998</foreign-bind-port>
     <foreign-connect-port>7998</foreign-connect-port>
     <ssl-certificate>-----BEGIN CERTIFICATE-----
+MIICzTCCAbWgAwIBAgIICpbE6WZvS7IwDQYJKoZIhvcNAQELBQAwHzEdMBsGA1UE
+AwwUMTcyODY0NjU3OTU5NjM2MDc5MTcwHhcNMTYwNTAzMTYzNzA3WhcNMjYwNTAx
+MTYzNzA3WjAfMR0wGwYDVQQDDBQxNzI4NjQ2NTc5NTk2MzYwNzkxNzCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAKUN9PJibwGJzph/UlcMkJhNlTe/5g3Q
+GpPbBDV29KGTBjK8TYBUFhAiP41Z+ewWzUblOWPTmEEPPOnbeZQk2fZtvSJW9PKo
+l7nz8QhIHGraHvc8J/NblhgbSpJxyMwr6BBDp7J1rFqZoefMjcVDBTJ+YjcUpWKm
+EWgkJ861mgeqQ0UZ8M1zdnp7QmKSlDrSjWuSCaMvm/KlqzwdxtBmeH2qgOrqPtUi
+tdVfnIvVQ2O90bdVX1U3MsL4eHMARu3rNw/mrbIu2r9XoOHiJ9+BygiR39v1m4JM
+5NLJb/bjUjQeZY6zjVRfYvdpac0cT5ekUQrDHNwYY+JYr5RDqHvHrU0CAwEAAaMN
+MAswCQYDVR0TBAIwADANBgkqhkiG9w0BAQsFAAOCAQEAX5ndA2GtOMqZ+0KDJvNr
+46Mrj3O95LBorRNPeW6NeuV2i8qvenwZRBh/OCxsOflF3kEf/Pr73Au5/hGPfZHa
+7ty+Y5pKoJBMt3GuWt4VhlgepFKFNSFbfAMEcAJ4iF7EX9fHriY+P2F+sMUBJ0fn
+GPn2EQ3sN7ivU9TFtKyh6hEDD7/L5AWV1//f+GIeDAupba/jWwHS8Pc040zU/bEe
+xFUfCNcUTCirFo5VVaaO+DPE7eHH7BMa9Tmoh1uG05ZHu2A/eF3G8Jf93z4m4Wj5
+ukLETnaFFqc6y6Ek+bWa+QM9N7tfJxPH+MBBoVmie1wr/GLOPFmuuYvSfk70egzR
++w==
+-----END CERTIFICATE-----
 </ssl-certificate>
     <zone/>
   </host>
 </hosts>
+===========================================================================
+clusters.xml
+===========================================================================
+Validation results: OK
+===========================================================================
 <clusters xsi:schemaLocation="http://marklogic.com/xdmp/clusters clusters.xsd" xml:lang="zxx" timestamp="14733731462194270" xmlns="http://marklogic.com/xdmp/clusters" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <security-version>80006</security-version>
   <effective-version>8000600</effective-version>
@@ -3794,6 +4018,22 @@
   <cluster-name>dhcp-34-014.london.marklogic.com-cluster</cluster-name>
   <ssl-fips-enabled>true</ssl-fips-enabled>
   <xdqp-ssl-certificate>-----BEGIN CERTIFICATE-----
+MIICzDCCAbSgAwIBAgIJAIVPCg10R/lXMA0GCSqGSIb3DQEBCwUAMB4xHDAaBgNV
+BAMMEzI4MjkxNjg0OTY1ODUyODc2MjkwHhcNMTYwNTAzMTYzNzA3WhcNMjYwNTAx
+MTYzNzA3WjAeMRwwGgYDVQQDDBMyODI5MTY4NDk2NTg1Mjg3NjI5MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyUg50xdWE2skGAtjJvJs967qv8tGKXi+
+NjLW4nQYqNXh/KYWlPeQkFEzdvZDDcVjDMmjX2UUsHtGAk9+SrqDZXIQuMqH2oOE
+v3jyEgDjl7bzgmmpCpJ1WYWTf+RBIkSlZlv5rbXHeHy0ZEM8xy17FtTu7a4OISZe
+16LrxiTKbNGZhytKsNI0jAlfj4CAmX43PcwBEJU5eE6XeUrGgOHu84Ac7ZnoPK0r
+lODyiTQmCuQf+45TVWg353wRx9r6d26DfgtdwSB0YNZGWN4BeqE1UogLMiLTHSvd
+2JY2B0WrL9pOAe+RrI7DZinKh2h2n8ZCtv8QVGOVMAI/Q0nLJtoVoQIDAQABow0w
+CzAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBCwUAA4IBAQBFeOTJ2FRkY8n0NczeVBzl
+eqCJyNNwi9rE1PugSxq/ZzlUQblUHGPT+fKt+bUD75zl8P08nxk/OQF7eSt9yZa3
+CcHfQClFzRP3H+ZfbF7JGlcpKHAPgWmxxafjWEl+HhpJIza8ys1WINpFGWatD60w
+FKA+BeIrLfElZC/Im+ss6V3Y6ikO92kstoq5POp41uav2DuEeUdcht7hyW6bcZjE
+Tuk6RKa3DozE2DJAmB0skZkyOAkRMaVIGEoeZv25ipMTwW7qbzhmWY/NR8PS5c0t
+ohG0mdG0gGylML8LBqVMEERpoM9fw4ywamyP9DlLGpuudNkTz7j3d7FdgxKGwelY
+-----END CERTIFICATE-----
 </xdqp-ssl-certificate>
   <xdqp-ssl-private-key>STRIPPED</xdqp-ssl-private-key>
   <bootstrap-hosts>
@@ -3801,4 +4041,3 @@
   </bootstrap-hosts>
   <foreign-clusters/>
 </clusters>
-</support-dump>
