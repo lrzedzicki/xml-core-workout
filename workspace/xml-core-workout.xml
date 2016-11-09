@@ -1,0 +1,45 @@
+<export><workspace name="xml-core-workout"><query name="Query 1" focus="false" active="false" content-source="as:2373634144810730251:" mode="xquery">declare namespace test="http://test.com";
+(
+doc("http://test.com/123.xml")/test:a/@type,
+doc("http://test.com/456.xml")/test:a/@type
+);</query><query name="Query 2" focus="false" active="false" content-source="as:2373634144810730251:" mode="xquery">xquery version "1.0-ml";
+xdmp:collection-delete("mlw16")</query><query name="Query 3" focus="false" active="false" content-source="as:2373634144810730251:" mode="xquery">xdmp:describe(fn:node-name(fn:doc("http://test.com//Users/lrzedzic/cases/17707-xmlattr/123.xml.xml")/*/@*))</query><query name="XSL" focus="false" active="true" content-source="as:2373634144810730251:" mode="xquery">let $xml := document {
+  &lt;doc&gt;
+    &lt;p&gt;sample&lt;/p&gt;
+    &lt;test&gt;
+      &lt;data/&gt;
+    &lt;/test&gt;
+  &lt;/doc&gt;
+}
+
+let $xsl :=
+  &lt;xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+    &lt;xsl:output method="xml" indent="no"/&gt;
+
+    &lt;xsl:template match="test"&gt;
+      &lt;new-element&gt;
+        &lt;xsl:apply-templates select="@*|node()"/&gt;
+      &lt;/new-element&gt;
+    &lt;/xsl:template&gt;
+    
+    &lt;xsl:template match="data"/&gt;
+
+    &lt;xsl:template match="@*|node()"&gt;
+      &lt;xsl:copy&gt;
+        &lt;xsl:apply-templates select="@*|node()"/&gt;
+      &lt;/xsl:copy&gt;
+    &lt;/xsl:template&gt;
+
+  &lt;/xsl:stylesheet&gt;
+
+return xdmp:xslt-eval($xsl, $xml)</query><query name="fibo" focus="true" active="true" content-source="as:2373634144810730251:" mode="xquery">xquery version "1.0-ml";
+
+declare function local:fib($n)
+{
+  if ($n = 1 or $n = 2) then
+    1
+  else 
+    local:fib($n - 1) + local:fib($n - 2)
+};
+
+local:fib(11)</query></workspace></export>
