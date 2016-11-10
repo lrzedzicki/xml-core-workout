@@ -346,55 +346,112 @@ HTTP requests<br>
 XInclude processing</p>
 
 <p>... and much more</p>
-</div></div></section><section data-id="f779221427e0b3c7546eea288c7932dc"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 44px;" data-block-id="724f7871b0047cfd9cb0f328fafcef98"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
-<pre><span style="font-size:0.7em">&lt;p:declare-step xmlns:p="http://www.w3.org/ns/xproc" 
- version="1.0" name="pipeline"&gt;
-  &lt;p:input port="source"/&gt;
-  &lt;p:output port="result"&gt;
-    &lt;p:pipe port="result" step="output-input"/&gt;
-  &lt;/p:output&gt;
- &lt;p:identity name="output-input"&gt;
-  &lt;p:input port="source"&gt;
-     &lt;p:pipe port="source" step="pipeline"/&gt;
-   &lt;/p:input&gt;
-  &lt;/p:identity&gt;
-&lt;/p:declare-step&gt;
+</div></div></section><section data-id="f779221427e0b3c7546eea288c7932dc"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 640px; left: 160px; top: 490px;" data-block-id="724f7871b0047cfd9cb0f328fafcef98"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<pre><span style="font-size:0.7em">This pipeline takes a an input document and outputs it. Not very useful but it is the simplest pipeline we can build.</span></pre>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="9afd7e978966d44e824ab44437e63aa6" style="min-width: 30px; min-height: 30px; width: 640px; height: 280px; left: 160px; top: 140px;"><div class="sl-block-content" style="z-index: 12;"><pre class="bash"><code>&lt;p:declare-step xmlns:p="http://www.w3.org/ns/xproc" 
+ version="1.0" name="pipeline"&gt;
+  &lt;p:input port="source"/&gt;
+  &lt;p:output port="result"&gt;
+    &lt;p:pipe port="result" step="output-input"/&gt;
+  &lt;/p:output&gt;
+ &lt;p:identity name="output-input"&gt;
+  &lt;p:input port="source"&gt;
+     &lt;p:pipe port="source" step="pipeline"/&gt;
+   &lt;/p:input&gt;
+  &lt;/p:identity&gt;
+&lt;/p:declare-step&gt;</code></pre></div></div></section><section data-id="99b32b611be080b906bc882a04351ae4"><div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 160px; top: 306px;" data-block-id="61a3bf4736521310165ff8b560e1837b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<pre>We declare the XProc namespace, the XProc version and we name our step. Steps do not always need to be named but life will be simpler if you do. If you name it you can refer to it and any error messages you might receive will be considerably easier to understand.</pre>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="99a768b38bdb1620503941b57d5eb5c2" style="min-width: 30px; min-height: 30px; width: 640px; height: 158px; left: 160px; top: 70px;"><div class="sl-block-content" style="z-index: 12;"><pre class="bash"><code>&lt;p:declare-step xmlns:p="http://www.w3.org/ns/xproc" 
+  version="1.0" name="pipeline"&gt;
+    … 
+&lt;/p:declare-step&gt;</code></pre></div></div></section><section data-id="ad0f50d144d7448bdf236e607e492b38"><div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 160px; top: 310px;" data-block-id="caa4f1133969da54dbff5529bec3d7dc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="text-align:left">An input defines an input port. You can think of a port as a location to which something can be connected. Content is supplied to a step via an input port. Ports are named using the port attribute. </p>
 
-This pipeline takes a an input document and outputs it. Not very useful but it is the simplest pipeline we can build.</span></pre>
-</div></div></section><section data-id="99b32b611be080b906bc882a04351ae4"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 44px;" data-block-id="61a3bf4736521310165ff8b560e1837b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
-<pre>&lt;p:declare-step xmlns:p="http://www.w3.org/ns/xproc" 
-  version="1.0" name="pipeline"&gt;
-    … 
-&lt;/p:declare-step&gt;
-
-
-We declare the XProc namespace, the XProc version and we name our step. Steps do not always need to be named but life will be simpler if you do. If you name it you can refer to it and any error messages you might receive will be considerably easier to understand.</pre>
-</div></div></section><section data-id="ad0f50d144d7448bdf236e607e492b38"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 44px;" data-block-id="caa4f1133969da54dbff5529bec3d7dc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
-<p>p:input</p>
-
-<p> </p>
-
-<p>An input defines an input port. You can think of a port as a location to which something can be connected. Content is supplied to a step via an input port. Ports are named using the port attribute. </p>
-
-<p>Input ports can be connected to things<br>
-This port is connected to an external document using p:document:</p>
-
-<p> </p>
-
-<pre style="text-align: center;">&lt;p:input port="source"&gt;
+<p style="text-align:left">Input ports can be connected to things<br>
+This port is connected to an external document using p:document.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="a033e69296427225e4a1f8f87f51886b" style="min-width: 30px; min-height: 30px; width: 640px; height: 140px; left: 160px; top: 140px;"><div class="sl-block-content" style="z-index: 12;"><pre class="bash"><code>&lt;p:input port="source"&gt;
   &lt;p:document href="input.xml"/&gt;
-&lt;/p:input&gt;</pre>
-</div></div></section><section data-id="73e14b42537a9a567a6ef9580d802b57"><div class="sl-block" data-block-type="code" data-block-id="c720239320587ac2dc71ce3d2a1aa1f5" style="min-width: 30px; min-height: 30px; width: 960px; height: 140px; left: 0px; top: 280px;"><div class="sl-block-content" style="z-index: 11;"><pre class="bash"><code>&lt;p:input port="source"&gt;
+&lt;/p:input&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="9fd670bf3ea461bfd911d86128e522bb" style="height: auto; min-width: 30px; min-height: 30px; width: 640px; left: 160px; top: 20px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h3><span style="color:rgb(255, 255, 255)">p:input</span></h3>
+</div></div></section><section data-id="73e14b42537a9a567a6ef9580d802b57"><div class="sl-block" data-block-type="code" data-block-id="c720239320587ac2dc71ce3d2a1aa1f5" style="min-width: 30px; min-height: 30px; width: 640px; height: 141px; left: 160px; top: 210px;"><div class="sl-block-content" style="z-index: 11;"><pre class="bash"><code>&lt;p:input port="source"&gt;
   &lt;p:pipe port="source" step="pipeline"/&gt;
 &lt;/p:input&gt;</code></pre></div></div>
-<div class="sl-block" data-block-type="text" data-block-id="b5e5e9b2556dec0fc0906e1605b458ca" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; color: rgb(255, 255, 255);">
-<p><span style="color:rgb(38, 51, 51); text-align:start">we can connect steps together using the </span>p:pipe<span style="color:rgb(38, 51, 51); text-align:start"> element. This allows us to be connect the output of one step to the input of another</span></p>
+<div class="sl-block" data-block-type="text" data-block-id="2d583163467322f109f3c5ba27f8b4f0" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 160px; top: 420px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:left">we can connect steps together using the p:pipe element. This allows us to be connect the output of one step to the input of another</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="40d83aeee3271b0a6ae476a3b4e36a55" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h3><span style="color:rgb(255, 255, 255); text-align:left">p:pipe</span></h3>
+</div></div></section><section data-id="d2b5c81a9298932a045a2bc7b2afe926"><div class="sl-block" data-block-type="code" style="width: 640px; height: 110px; left: 160px; top: 100px;" data-block-id="ad4895d460aba92e8391e4e7a1fc4090"><div class="sl-block-content" style="z-index: 11;"><pre class="bash"><code>&lt;p:output port="result"&gt;
+  &lt;p:pipe port="result" step="output-input"/&gt;
+&lt;/p:output&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 160px; top: 280px;" data-block-id="9e1f7bf983837205ba760b66e17c4571"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:left">p:output defines an output port. The results of steps are accessed through output ports. Output ports can be set up in much the same way as input ports. However, static documents and inline documents are generally not much use on output. Normally we would want to process the output of computation.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 20px;" data-block-id="774cf4bcd22cbb196a90c60fea264839"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h3>p:output</h3>
+</div></div></section><section data-id="b712fd6f0de0d7c261e7c921ab0f0048"><div class="sl-block" data-block-type="code" style="width: 640px; height: 420px; left: 160px; top: 140px;" data-block-id="a15bc3e467f80351d1970ec08d6ca5e5"><div class="sl-block-content" style="z-index: 11;"><pre class="bash"><code>&lt;p:declare-step xmlns:p="http://www.w3.org/ns/xproc" 
+                version="1.0" name="pipeline"&gt;
+	
+  &lt;p:input port="source" sequence="true"/&gt;
+	
+  &lt;p:output port="result"&gt;
+    &lt;p:pipe port="result" step="wrap-inputs"/&gt;
+  &lt;/p:output&gt;
+	
+  &lt;p:wrap-sequence name="wrap-inputs" wrapper="wrapper"&gt;
+    &lt;p:input port="source"&gt;
+      &lt;p:pipe port="source" step="pipeline"/&gt;
+    &lt;/p:input&gt;
+  &lt;/p:wrap-sequence&gt;
+	
+&lt;/p:declare-step&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 20px;" data-block-id="8ee4faf413827aac9a9b0e9a51030fa2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h3>Combine multiple files</h3>
+</div></div></section><section data-id="289b42fd2a1cbfc6fda625cdb3edd575"><div class="sl-block" data-block-type="code" style="width: 640px; height: 420px; left: 160px; top: 140px;" data-block-id="3735d6ce83ea9c9da603795546492a95"><div class="sl-block-content" style="z-index: 11;"><pre class="bash"><code>&lt;p:pipeline name="my-pipeline"&gt;
+  &lt;!-- some steps --&gt;
+&lt;/p:pipeline&gt;
+
+It is exactly the same as:
+
+&lt;p:declare-step name="my-pipeline"&gt;
+  &lt;p:input port='source' primary='true'/&gt;
+  &lt;p:input port='parameters' kind='parameter' primary='true'/&gt;
+  &lt;p:output port='result' primary='true'/&gt;
+  &lt;!-- some steps --&gt;
+&lt;/p:declare-step&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 20px;" data-block-id="60ffb3eeef39dc8f2b78b32ec1630e3c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h3>p:pipeline vs p:declare-step<br>
+</h3>
+</div></div></section><section data-id="20b7950a986d039d19566fff09bd64ba"><div class="sl-block" data-block-type="code" style="width: 640px; height: 420px; left: 160px; top: 140px;" data-block-id="e96a674ce82cb15bc5dfd6116ed28c36"><div class="sl-block-content" style="z-index: 11;"><pre class="bash"><code>&lt;p:pipeline name="my-pipeline"&gt;
+  &lt;!-- some steps --&gt;
+&lt;/p:pipeline&gt;
+
+It is exactly the same as:
+
+&lt;p:declare-step name="my-pipeline"&gt;
+  &lt;p:input port='source' primary='true'/&gt;
+  &lt;p:input port='parameters' kind='parameter' primary='true'/&gt;
+  &lt;p:output port='result' primary='true'/&gt;
+  &lt;!-- some steps --&gt;
+&lt;/p:declare-step&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 20px;" data-block-id="cbfb962cd32c4416d41a2276e7e3d7c9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h3>p:pipeline vs p:declare-step<br>
+</h3>
+</div></div></section><section data-id="dbf30f2624ee9dcd5dd99945dcdeb136"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 190px; height: auto;" data-block-id="1197d237dbb295d096c89a39fc2de307"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h1>Exercise</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 287px; height: auto;" data-block-id="edba3e559d49eb9318bbbd0ba61d9c0e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle">
+<h2>Extract support dump, parse, upload</h2>
 </div></div></section></section>
 			</div>
 		</div>
 
 		<script>
-			var SLConfig = {"deck": {"id":820624,"slug":"xml-core-workout","title":"XML Core Workout","description":"Exercises in XML, XPath, Regexp and XProc","visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/41533f56494d791ee66aa80840b9e4ae/thumb.jpg","view_count":0,"user":{"id":415470,"username":"xchaotic","name":"Lech Rzedzicki","description":"","thumbnail_url":"https://www.gravatar.com/avatar/322580300cc519281db468bc7bdd2b3e?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":true,"lite":false,"team_id":null,"settings":{"id":254076,"present_controls":false,"present_upsizing":true,"present_notes":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"opensans","theme_color":"forest-yellow","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"should_loop":false,"share_notes":false,"slide_number":false,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1478713518011,"font_typekit":null,"font_google":null,"notes":{}}};
+			var SLConfig = {"deck": {"id":820624,"slug":"xml-core-workout","title":"XML Core Workout","description":"Exercises in XML, XPath, Regexp and XProc","visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/41533f56494d791ee66aa80840b9e4ae/thumb.jpg","view_count":0,"user":{"id":415470,"username":"xchaotic","name":"Lech Rzedzicki","description":"","thumbnail_url":"https://www.gravatar.com/avatar/322580300cc519281db468bc7bdd2b3e?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":true,"lite":false,"team_id":null,"settings":{"id":254076,"present_controls":false,"present_upsizing":true,"present_notes":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"opensans","theme_color":"forest-yellow","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"should_loop":false,"share_notes":false,"slide_number":false,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1478772437782,"font_typekit":null,"font_google":null,"notes":{}}};
 			SLConfig.current_user = {
 				name: "Lech Rzedzicki",
 				username: "xchaotic",
